@@ -1,5 +1,5 @@
 {
-  "name": "Agora_token_demo",
+  "name": "Easemob Chat Demo",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "agora-chat": "^1.0.2",
+    "easemob-websdk": "^4.0.3",
     "agora-rtc-sdk-ng": "^4.6.3"
   },
   "devDependencies": {

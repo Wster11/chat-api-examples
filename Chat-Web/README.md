@@ -1,9 +1,9 @@
 # 发送和接收点对点消息
 
-本页面介绍了如何快速集成 Agora Chat SDK 来实现单聊。
+本页面介绍了如何快速集成 Easemob Chat SDK 来实现单聊。
 
 ## 消息发送与接收流程
-登录 Agora Chat 流程如下：
+登录 Easemob Chat 流程如下：
 
 使用帐号和密码在 App Server 上注册。
 注册成功后，使用账号和密码从 App Server 中获取 Token 。
