@@ -36,7 +36,7 @@ window.onload = function () {
   document.getElementById("register").onclick = function () {
     username = document.getElementById("userID").value.toString();
     password = document.getElementById("password").value.toString();
-    // 1.使用用户名密码的方式
+    
     WebIM.conn
       .registerUser({ username, password })
       .then((res) => {
