@@ -7,9 +7,10 @@
 
 使用帐号和密码在 App Server 上注册。
 注册成功后，使用账号和密码从 App Server 中获取 Token 。
-使用账号和 Token 登录到 Chat 服务器。
+使用账号和 Token 登录到 Chat 服务器。(待修改为环信登录流程)
 
-![登录流程](https://web-cdn.agora.io/docs-files/1636443945728)
+
+![登录流程](https://web-cdn.agora.io/docs-files/1636443945728) (待修改为环信登录流程)
 
 发送和接收点对点消息包括以下流程：
 
@@ -18,8 +19,8 @@ Chat 服务器将消息发送到客户端 B。客户端 B 收到点对点消息�
 
 ## 前提条件
 
-- 有效的 Agora Chat 开发者账号。
-- [创建 Agora Chat 项目并获取 AppKey](https://docs-preprod.agora.io/en/test/enable_agora_chat) 。
+- 有效的 Easemob Chat 开发者账号。
+- [创建 Easemob Chat 项目并获取 AppKey](https://docs-im.easemob.com/im/quickstart/guide/experience) 。
 - [npm](https://www.npmjs.com/get-npm)
 - SDK 支持 IE9+、FireFox10+、Chrome54+、Safari6+ 之间文本、表情、图片、音频、地址消息相互发送。
 - SDK 本身已支持 IE9+、FireFox10+、Chrome54+、Safari6+。
@@ -29,17 +30,17 @@ Chat 服务器将消息发送到客户端 B。客户端 B 收到点对点消息�
 
 ### 1. 准备开发环境
 
-本节介绍如何创建项目，将 Agora Chat SDK 集成进你的项目中。
+本节介绍如何创建项目，将 Easemob Chat SDK 集成进你的项目中。
 
 #### 新建 Web 项目
 
-新建一个目录 Agora_quickstart。在目录下运行 npm init 创建一个 package.json 文件，然后创建以下文件:
+新建一个目录 Easemob_quickstart。在目录下运行 npm init 创建一个 package.json 文件，然后创建以下文件:
 
 index.html
 index.js
 此时你的目录中包含以下文件：
 
-Agora_quickstart
+Easemob_quickstart
 ├─ index.html
 ├─ index.js
 └─ package.json
@@ -216,8 +217,8 @@ window.onload = function () {
         let option = {
             chatType: 'singleChat',    // 设置为单聊
             type: 'txt',               // 消息类型
-            to: peerId, // 接收消息对象（用户 ID)
-            msg: peerMessage // 消息
+            to: peerId,                // 接收消息对象（用户 ID)
+            msg: peerMessage           // 消息
         }
         let msg = WebIM.message.create(option); 
         WebIM.conn.send(msg).then((res) => {

@@ -36,7 +36,7 @@ window.onload = function () {
   document.getElementById("register").onclick = function () {
     username = document.getElementById("userID").value.toString();
     password = document.getElementById("password").value.toString();
-    
+
     WebIM.conn
       .registerUser({ username, password })
       .then((res) => {
@@ -61,7 +61,7 @@ window.onload = function () {
     username = document.getElementById("userID").value.toString();
     password = document.getElementById("password").value.toString();
 
-    // 1.使用用户名密码的方式
+    // 使用用户名密码的方式
     WebIM.conn
       .open({ user: username, pwd: password })
       .then((res) => {
@@ -93,9 +93,9 @@ window.onload = function () {
     let peerMessage = document.getElementById("peerMessage").value.toString();
     let option = {
       chatType: "singleChat", // 设置为单聊
-      type: "txt", // 消息类型
-      to: peerId, // 接收消息对象（用户 ID)
-      msg: peerMessage // 消息
+      type: "txt",            // 消息类型
+      to: peerId,             // 接收消息对象（用户 ID)
+      msg: peerMessage        // 消息
     };
     let msg = WebIM.message.create(option);
     WebIM.conn
